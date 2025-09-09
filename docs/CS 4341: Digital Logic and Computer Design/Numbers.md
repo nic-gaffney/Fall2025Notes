@@ -26,27 +26,27 @@ Binary numbers :computer:
 
 ### Decimal to Binary :keycap_ten::arrow_right::two:
 - Two Methods:
-    - Largest power of 2 that fits
+  - Largest power of 2 that fits
 
-        $$
-        53_{10} - 32_{10} = 21_{10}\\
-        - 16_{10} = 5_{10}\\
-        - 4_{10} = 1_{10}\\
-        - 1_{10} = 0\\
-         53_{10} =110101_2
-        $$
+    $$
+    53_{10} - 32_{10} = 21_{10}\\
+    - 16_{10} = 5_{10}\\
+    - 4_{10} = 1_{10}\\
+    - 1_{10} = 0\\
+    53_{10} =110101_2
+    $$
 
-    - Repeatedly divide by 2
+  - Repeatedly divide by 2
 
-        $$
-        53_{10}\div2=26_{10} R\blue1 \\
-        \div2=13_{10}R\blue0          \\
-        \div2=6_{10}R\blue1           \\
-        \div2=3_{10}R\blue0           \\
-        \div2=1_{10}R\blue1           \\
-        \div2=R\blue1                 \\
-        =\blue{110101}_2
-        $$
+    $$
+    53_{10}\div2=26_{10} R\blue1 \\
+    \div2=13_{10}R\blue0          \\
+    \div2=6_{10}R\blue1           \\
+    \div2=3_{10}R\blue0           \\
+    \div2=1_{10}R\blue1           \\
+    \div2=R\blue1                 \\
+    =\blue{110101}_2
+    $$
 
 ### Binary Values and Range
 #### $N$ digit decimal number
