@@ -31,7 +31,7 @@ We went from vaccum tubes to silicon for semiconductors.
 
 ## Logic gates
 ### NOT
-$Y=\not{A}$
+$Y=\overline{A}$
 
 | A | Y |
 | - | - |
@@ -59,7 +59,7 @@ $Y=A+B$
 | 1 | 1 | 1 |
 
 ### NAND
-$Y=\not{AB}$
+$Y=\overline{AB}$
 
 | A | B | Y |
 | - | - | - |
@@ -69,7 +69,7 @@ $Y=\not{AB}$
 | 1 | 1 | 0 |
 
 ### NOR
-$Y=\not{A+B}$
+$Y=\overline{A+B}$
 
 | A | B | Y |
 | - | - | - |
@@ -79,7 +79,7 @@ $Y=\not{A+B}$
 | 1 | 1 | 0 |
 
 #### XOR
-$Y=A\xor B$
+$Y=A\oplus B$
 
 | A | B | Y |
 | - | - | - |
@@ -89,7 +89,7 @@ $Y=A\xor B$
 | 1 | 1 | 0 |
 
 #### XNOR
-$Y=\not{A\xor B}$
+$Y=\overline{A\oplus B}$
 
 | A | B | Y |
 | - | - | - |
@@ -100,7 +100,7 @@ $Y=\not{A\xor B}$
 
 ### Multiple input Logic gates
 #### NOR3
-$Y=\not{A + B + C}$
+$Y=\overline{A + B + C}$
 
 | A | B | C | Y |
 | - | - | - | - |
@@ -128,7 +128,7 @@ $Y=ABC$
 | 1 | 1 | 1 | 1 |
 
 #### XOR3
-$Y=\not{A + B + C}$
+$Y=\overline{A + B + C}$
 
 Odd parity: The output is 1 when an odd number of inputs is 1
 
