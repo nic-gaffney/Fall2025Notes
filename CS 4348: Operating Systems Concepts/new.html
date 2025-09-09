@@ -20,7 +20,7 @@
     
     
       
-        <title>Unknown - Fall 2025</title>
+        <title>Multiprogramming - Fall 2025</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unknown" class="md-skip">
+        <a href="#multiprogramming" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unknown
+              Multiprogramming
             
           </span>
         </div>
@@ -453,17 +453,88 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Multiprogramming
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="new.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Unknown
+    Multiprogramming
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#achieving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Achieving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Achieving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using processes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -565,6 +636,53 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#achieving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Achieving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Achieving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using processes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -579,9 +697,27 @@
 
 
 
-<h1 id="unknown">Unknown</h1>
-<p>09/02/2025</p>
+<h1 id="multiprogramming">Multiprogramming</h1>
+<p>09/09/2025</p>
 <hr />
+<h2 id="concurrency">Concurrency</h2>
+<h3 id="achieving">Achieving</h3>
+<ul>
+<li>Use <em>multiple</em> processes<ul>
+<li>Different processes run on seperate processors or seperate tasks</li>
+</ul>
+</li>
+<li>Processes need to share resources<ul>
+<li>Use IPC</li>
+</ul>
+</li>
+</ul>
+<h4 id="using-processes">Using processes</h4>
+<p>Solves both problems, with a hitch:</p>
+<ol>
+<li>Needs an <strong>explicit setup</strong> to enable processes to share memory</li>
+<li><strong>Creating and destroying</strong> processes is quite <em>expensive</em></li>
+</ol>
 
 
 
