@@ -1,0 +1,1406 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../index.html">
+      
+      
+        <link rel="next" href="Gates.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Boolean Algebra - Fall 2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/katex.min.css">
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#boolean-algebra" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Fall 2025" class="md-header__button md-logo" aria-label="Fall 2025" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fall 2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Boolean Algebra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Fall 2025" class="md-nav__button md-logo" aria-label="Fall 2025" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Fall 2025
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fall 2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 4341: Digital Logic and Computer Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS 4341: Digital Logic and Computer Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Boolean Algebra
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="BooleanAlgebra.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Boolean Algebra
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-logic-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of logic circuits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of logic circuits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-of-combinational-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules of combinational composition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sum of products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-of-sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product of sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-equations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      POS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-axioms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Axioms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-theorems-of-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean theorems of One
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean theorems of One">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-element-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Element theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idempotency-element-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idempotency Element theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#involution-element-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Involution Element theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliment-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliment theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Gates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logic Gates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Numbers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Number Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 4348: Operating Systems Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CS 4348: Operating Systems Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/Introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/Processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/new.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unknown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 4386: Compiler Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CS 4386: Compiler Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS%204386%3A%20Compiler%20Design/class-overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-logic-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of logic circuits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of logic circuits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-of-combinational-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules of combinational composition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sum of products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-of-sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product of sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-equations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      POS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-axioms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Axioms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-theorems-of-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean theorems of One
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean theorems of One">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-element-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Element theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idempotency-element-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idempotency Element theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#involution-element-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Involution Element theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliment-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliment theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="boolean-algebra">Boolean Algebra</h1>
+<p>09/09/2025</p>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>A logic circuit is composed of:</p>
+<ul>
+<li>inputs</li>
+<li>outputs</li>
+<li>functional specification</li>
+<li>timing specification</li>
+</ul>
+<h2 id="types-of-logic-circuits">Types of logic circuits</h2>
+<ul>
+<li>Combinational logic<ul>
+<li>Memoryless</li>
+<li>Outputs determined by <em>current value</em> of inputs</li>
+</ul>
+</li>
+<li>Sequential logic<ul>
+<li>Memory</li>
+<li>Outputs determined by <strong>previous</strong> and current value of inputs</li>
+</ul>
+</li>
+</ul>
+<h3 id="rules-of-combinational-composition">Rules of combinational composition</h3>
+<ul>
+<li>Every element is combinational</li>
+<li>Every note is either input or output</li>
+<li>No cyclic paths<blockquote>
+<p>Inputs are only inputs, outputs are only outputs</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="boolean-equations">Boolean Equations</h2>
+<ul>
+<li>Functional specification of outputs in terms of inputs<blockquote>
+<p>Adder example: <br>
+<span class="arithmatex">\(S=F(A,B,C_{in})\)</span> <br>
+<span class="arithmatex">\(C_{out}=F(A,B,C_{in})\)</span> <br>
+<span class="arithmatex">\(S=A \oplus B \oplus C\)</span> <br>
+<span class="arithmatex">\(C_{out}=AB + AC_{in} + BC_{in}\)</span></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="definitions">Definitions</h4>
+<ul>
+<li><strong>Compliment</strong>: Variable with bar over it: <span class="arithmatex">\(\overline A\)</span></li>
+<li><strong>Literal</strong>: Varialbe or its <em>compliment</em>: <span class="arithmatex">\(\overline{A}\)</span></li>
+<li><strong>Implicant</strong>: Product of <em>literals</em></li>
+<li><strong>Minterm</strong>: Product that includes all input variables</li>
+<li><strong>Maxterm</strong>: Sum that includes all input variables</li>
+</ul>
+<h3 id="sum-of-products">Sum of products</h3>
+<ul>
+<li>All boolean equations can be written in <strong>SOP</strong> form</li>
+<li>Each row has a <em>minterm</em></li>
+<li>A minterm is a <strong>product</strong> of literals</li>
+<li>Each minterm is <strong>TRUE</strong> for that row</li>
+<li>Form function by <strong>ORing minterms</strong> where <strong>output is 1</strong></li>
+<li>Thus, a <span class="arithmatex">\(\text{\blue{sum}}\)</span> of <span class="arithmatex">\(\text{\red{products}}\)</span></li>
+<li><span class="arithmatex">\(Y = F(A,B) = \red {\overline A B} \blue + \red{AB} = \sum(1,3)\)</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A B</th>
+<th>Y</th>
+<th>Minterm</th>
+<th>Minterm name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 0</td>
+<td>0</td>
+<td><span class="arithmatex">\(\overline AB\)</span></td>
+<td><span class="arithmatex">\(m_0\)</span></td>
+</tr>
+<tr>
+<td>0 1</td>
+<td>1</td>
+<td><span class="arithmatex">\(\overline AB\)</span></td>
+<td><span class="arithmatex">\(m_1\)</span></td>
+</tr>
+<tr>
+<td>1 0</td>
+<td>0</td>
+<td><span class="arithmatex">\(A\overline B\)</span></td>
+<td><span class="arithmatex">\(m_2\)</span></td>
+</tr>
+<tr>
+<td>1 1</td>
+<td>1</td>
+<td><span class="arithmatex">\({AB}\)</span></td>
+<td><span class="arithmatex">\(m_3\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-of-sums">Product of sums</h3>
+<ul>
+<li>All boolean equations can be written in <strong>POS</strong> form</li>
+<li>Each row has a <strong>maxterm</strong></li>
+<li>A maxterm is a <strong>sum</strong> of literals</li>
+<li>Each maxterm is <strong>FALSE</strong> for that row</li>
+<li>Form function by <strong>ANDing maxterms</strong> where <strong>output is 0</strong></li>
+<li>Thus, a <span class="arithmatex">\(\text{\blue{product}}\)</span> of <span class="arithmatex">\(\text{\red{sums}}\)</span></li>
+<li><span class="arithmatex">\(Y = F(A,B) = \red {(A + B)} \blue \times \red{(\overline A + B)} = \Pi(0,2)\)</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A B</th>
+<th>Y</th>
+<th>Maxterm</th>
+<th>Maxterm name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 0</td>
+<td>0</td>
+<td><span class="arithmatex">\(A + B\)</span></td>
+<td><span class="arithmatex">\(M_0\)</span></td>
+</tr>
+<tr>
+<td>0 1</td>
+<td>1</td>
+<td><span class="arithmatex">\(A + \overline B\)</span></td>
+<td><span class="arithmatex">\(M_1\)</span></td>
+</tr>
+<tr>
+<td>1 0</td>
+<td>0</td>
+<td><span class="arithmatex">\(\overline A + B\)</span></td>
+<td><span class="arithmatex">\(M_2\)</span></td>
+</tr>
+<tr>
+<td>1 1</td>
+<td>1</td>
+<td><span class="arithmatex">\({\overline A + \overline B}\)</span></td>
+<td><span class="arithmatex">\(M_3\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<h4 id="boolean-equations_1">Boolean equations</h4>
+<p>You are going for lunch.</p>
+<ul>
+<li>You wont eat <span class="arithmatex">\(E=0\)</span></li>
+<li>if cafeteria is not open <span class="arithmatex">\(O=0\)</span> or</li>
+<li>if they only serve corndogs <span class="arithmatex">\(C=1\)</span></li>
+</ul>
+<h5 id="sop">SOP</h5>
+<p><span class="arithmatex">\(E = O\overline{C} = \sum(2)\)</span> <br>
+Draw the table</p>
+<table>
+<thead>
+<tr>
+<th>O C</th>
+<th>E</th>
+<th>Minterm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 0</td>
+<td>0</td>
+<td><span class="arithmatex">\(\overline OC\)</span></td>
+</tr>
+<tr>
+<td>0 1</td>
+<td>0</td>
+<td><span class="arithmatex">\(\overline OC\)</span></td>
+</tr>
+<tr>
+<td>1 0</td>
+<td>1</td>
+<td><span class="arithmatex">\(O\overline C\)</span></td>
+</tr>
+<tr>
+<td>1 1</td>
+<td>0</td>
+<td><span class="arithmatex">\({OC}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h5 id="pos">POS</h5>
+<p><span class="arithmatex">\(E = (O + C)(O + \overline C)(\overline O + \overline C) = \Pi(0,1,3)\)</span> <br>
+Draw the table</p>
+<table>
+<thead>
+<tr>
+<th>O C</th>
+<th>E</th>
+<th>Maxterm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 0</td>
+<td>0</td>
+<td><span class="arithmatex">\(O + C\)</span></td>
+</tr>
+<tr>
+<td>0 1</td>
+<td>0</td>
+<td><span class="arithmatex">\(O + \overline C\)</span></td>
+</tr>
+<tr>
+<td>1 0</td>
+<td>1</td>
+<td><span class="arithmatex">\(\overline O + C\)</span></td>
+</tr>
+<tr>
+<td>1 1</td>
+<td>0</td>
+<td><span class="arithmatex">\({\overline O + \overline C}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="boolean-axioms">Boolean Axioms</h3>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Axiom</th>
+<th>Dual</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td>Item2.1</td>
+<td>Item3.1</td>
+<td>Item3.1</td>
+</tr>
+<tr>
+<td>A2</td>
+<td><span class="arithmatex">\(0=1\)</span></td>
+<td>Item3.2</td>
+<td>Item3.2</td>
+</tr>
+<tr>
+<td>A3</td>
+<td><span class="arithmatex">\(0\times0=0\)</span></td>
+<td>Item3.3</td>
+<td>Item3.3</td>
+</tr>
+<tr>
+<td>A4</td>
+<td><span class="arithmatex">\(1\times1=1\)</span></td>
+<td>Item3.4</td>
+<td>Item3.4</td>
+</tr>
+<tr>
+<td>A5</td>
+<td><span class="arithmatex">\(0\times1 = 1\times0 = 0\)</span></td>
+<td>Item3.4</td>
+<td>Item3.4</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>dual: Replace <span class="arithmatex">\(\cdot\)</span> with + and 0 with 1</p>
+</blockquote>
+<h3 id="boolean-theorems-of-one">Boolean theorems of One</h3>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Theorem</th>
+<th>Dual</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td><span class="arithmatex">\(B\times1=B\)</span></td>
+<td><span class="arithmatex">\(B + 0 = B\)</span></td>
+<td>Identity</td>
+</tr>
+<tr>
+<td>T2</td>
+<td><span class="arithmatex">\(B\times0=0\)</span></td>
+<td><span class="arithmatex">\(B + 1 = 1\)</span></td>
+<td>Null Element</td>
+</tr>
+<tr>
+<td>T3</td>
+<td><span class="arithmatex">\(\overline B\times B=B\)</span></td>
+<td><span class="arithmatex">\(B + B = B\)</span></td>
+<td>Idempotency</td>
+</tr>
+<tr>
+<td>T4</td>
+<td><span class="arithmatex">\(B = \overline\overline B\)</span></td>
+<td></td>
+<td>Involution</td>
+</tr>
+<tr>
+<td>T5</td>
+<td><span class="arithmatex">\(B\times B = B\)</span></td>
+<td><span class="arithmatex">\(B + \overline B = 1\)</span></td>
+<td>Complements</td>
+</tr>
+</tbody>
+</table>
+<h4 id="identity-theorem">Identity theorem</h4>
+<ul>
+<li><span class="arithmatex">\(B\times 1 = B\)</span></li>
+<li><span class="arithmatex">\(B + 0 = B\)</span></li>
+</ul>
+<h4 id="null-element-theorem">Null Element theorem</h4>
+<ul>
+<li><span class="arithmatex">\(B\times 0 = 0\)</span></li>
+<li><span class="arithmatex">\(B + 1 = 1\)</span></li>
+</ul>
+<h4 id="idempotency-element-theorem">Idempotency Element theorem</h4>
+<ul>
+<li><span class="arithmatex">\(B\times B = B\)</span></li>
+<li><span class="arithmatex">\(B + B = B\)</span></li>
+</ul>
+<h4 id="involution-element-theorem">Involution Element theorem</h4>
+<ul>
+<li><span class="arithmatex">\(\overline\overline B = B\)</span></li>
+</ul>
+<h4 id="compliment-theorem">Compliment theorem</h4>
+<ul>
+<li><span class="arithmatex">\(B\times \overline B = 0\)</span></li>
+<li><span class="arithmatex">\(B + \overline B = 1\)</span></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="../javascripts/katex.min.js"></script>
+      
+        <script src="../javascripts/auto-render.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
