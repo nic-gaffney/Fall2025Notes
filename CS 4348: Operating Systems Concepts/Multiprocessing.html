@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="Processes.html">
+        <link rel="prev" href="Introduction.html">
       
       
-        <link rel="next" href="../CS%204386%3A%20Compiler%20Design/class-overview.html">
+        <link rel="next" href="Processes.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -418,29 +418,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="Processes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Processes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -466,7 +443,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="new.html" class="md-nav__link md-nav__link--active">
+      <a href="Multiprocessing.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -504,16 +481,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#achieving" class="md-nav__link">
-    <span class="md-ellipsis">
-      Achieving
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Achieving">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#using-processes" class="md-nav__link">
     <span class="md-ellipsis">
       Using processes
@@ -526,9 +493,172 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thread-specific-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread specific resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-specific-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process specific resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inception
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons-ult-vs-klt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and cons (ULT vs KLT)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pros and cons (ULT vs KLT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-level-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      User level threads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-level-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel level threads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-abstraction-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread abstraction models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-when-implementing-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issues when implementing threads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues when implementing threads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantics-of-fork-and-exec-syscalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantics of fork and exec syscalls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-cancellation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread cancellation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread-local storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizations
+    </span>
+  </a>
   
 </li>
       
@@ -536,6 +666,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Processes
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -653,16 +806,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#achieving" class="md-nav__link">
-    <span class="md-ellipsis">
-      Achieving
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Achieving">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#using-processes" class="md-nav__link">
     <span class="md-ellipsis">
       Using processes
@@ -675,9 +818,172 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thread-specific-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread specific resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-specific-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process specific resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inception
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons-ult-vs-klt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and cons (ULT vs KLT)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pros and cons (ULT vs KLT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-level-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      User level threads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-level-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel level threads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-abstraction-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread abstraction models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-when-implementing-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issues when implementing threads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues when implementing threads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantics-of-fork-and-exec-syscalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantics of fork and exec syscalls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-cancellation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread cancellation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread-local storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizations
+    </span>
+  </a>
   
 </li>
       
@@ -701,7 +1007,6 @@
 <p>09/09/2025</p>
 <hr />
 <h2 id="concurrency">Concurrency</h2>
-<h3 id="achieving">Achieving</h3>
 <ul>
 <li>Use <em>multiple</em> processes<ul>
 <li>Different processes run on seperate processors or seperate tasks</li>
@@ -712,12 +1017,181 @@
 </ul>
 </li>
 </ul>
-<h4 id="using-processes">Using processes</h4>
+<h3 id="using-processes">Using processes</h3>
 <p>Solves both problems, with a hitch:</p>
 <ol>
 <li>Needs an <strong>explicit setup</strong> to enable processes to share memory</li>
-<li><strong>Creating and destroying</strong> processes is quite <em>expensive</em></li>
+<li><strong>Creating and destroying</strong> processes is quite <em>expensive</em><ul>
+<li>Must allocate many resources</li>
+</ul>
+</li>
+<li>Switching between processes is also expensive<ul>
+<li>Switching between two processes requires <strong>saving</strong> state of one process
+  and <strong>loading</strong> state of another</li>
+<li>Especially important in a uniprocessor machine since <strong>all processes</strong>
+  need to share the same CPU</li>
+</ul>
+</li>
 </ol>
+<blockquote>
+<p>Suboptimal utilization of resources resulting in <br>
+1. increased execution time <br>
+2. higher response time for interactive apps</p>
+</blockquote>
+<h2 id="threads">Threads</h2>
+<ul>
+<li>Allow <em>related</em> processes to <em>share</em> resources including address space while
+also protecting unrelated processes from eachother</li>
+<li>Allow <em>multiple execution flows</em> within a single address space<ul>
+<li>Each execution flow is referred as a <em>thread</em> (initially referred to as tasks)</li>
+</ul>
+</li>
+</ul>
+<h4 id="thread-specific-resources">Thread specific resources</h4>
+<ul>
+<li>Program Counter</li>
+<li>Instruction register</li>
+<li>Condition Code Register</li>
+<li>Stack Pointer</li>
+<li>General Purpose CPU registers</li>
+</ul>
+<h4 id="process-specific-resources">Process specific resources</h4>
+<ul>
+<li>Address space</li>
+<li>code</li>
+<li>data</li>
+<li>heap</li>
+<li>memory</li>
+<li>cache</li>
+</ul>
+<blockquote>
+<p>Processes contain threads <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></p>
+</blockquote>
+<h3 id="evolution">Evolution</h3>
+<h4 id="inception">Inception</h4>
+<p>Initially, neither language (C/C++) nor kernel offered support for threads.</p>
+<ul>
+<li>Multi-threaded programing was only possible with third party libs such as
+POSIX (portable operating system interface)</li>
+<li>Kernel was oblivious to a process containing many threads</li>
+</ul>
+<p>Threads were created destroyed and managed completely in user space with no help from the kernel <strong>(User level threads, ULT)</strong></p>
+<h4 id="now">Now</h4>
+<p>As threads became more popular, more comprehensive support for multi-threaded
+programming emerged.</p>
+<ul>
+<li>Popularity increased after the introduction of multi-core machines</li>
+<li>Kernels are now aware of multiple threads in a process</li>
+<li>C/C++ added built in support for multi threading in 2011</li>
+<li>Java supported multithreading from its inception</li>
+</ul>
+<p>In many operating systems, threads are created, destroyed, and managed completely
+in kernel space</p>
+<ul>
+<li>Referred to as kernel level threads</li>
+<li>Kernel maintains information in thread control block<ul>
+<li>Analogous to process control block</li>
+</ul>
+</li>
+</ul>
+<h3 id="pros-and-cons-ult-vs-klt">Pros and cons (ULT vs KLT)</h3>
+<h4 id="user-level-threads">User level threads</h4>
+<ul>
+<li>Pros:<ul>
+<li>Low overhead: cheaper to C,D,M than KLT</li>
+<li>Flexible scheduling: Thread scheduling can be tailored on a per application
+  basis.</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>No parallelism: Only one thread can be run at a time (even with multiple
+  CPUS).</li>
+<li>Dependent progress: If one thread invokes a blocking operation, the entire
+  process is blocked</li>
+</ul>
+</li>
+</ul>
+<h4 id="kernel-level-threads">Kernel level threads</h4>
+<ul>
+<li>Pros:<ul>
+<li>Optimal CPU utilization: Each hread can be run on a seperate processor</li>
+<li>Independent progress: If one thread invokes a blocking operation,
+  then only that thread is blocked</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>High overhead</li>
+</ul>
+</li>
+</ul>
+<h3 id="thread-abstraction-models">Thread abstraction models</h3>
+<ol>
+<li>Many to one (ULT): Only ULT</li>
+<li>One to one (KLT): Only KLT</li>
+<li>Many to many (hybrid): Process has user level and kernel level threads<ol>
+<li>Very hard to implement</li>
+</ol>
+</li>
+</ol>
+<h2 id="issues-when-implementing-threads">Issues when implementing threads</h2>
+<h3 id="semantics-of-fork-and-exec-syscalls">Semantics of fork and exec syscalls</h3>
+<p>If a thread invokes <code>fork</code>, should the new process copy <em>all threads</em>?</p>
+<ul>
+<li>Oftentimes, <code>fork</code> is called only to immediately call <code>exec</code>, which would
+make it highly inefficient to create so many threads only to be destroyed</li>
+</ul>
+<p>Many implementations of Unix/Linux provide both variants.</p>
+<h3 id="signal-handling">Signal handling</h3>
+<p>Should a signal be delivered to <em>one</em> or <em>all</em> threads?</p>
+<ul>
+<li>Possible alternatives to deliver the signal to:<ul>
+<li>All threads</li>
+<li>Certain threads</li>
+<li>A single thread</li>
+<li>Thre thread to which the signal applies<blockquote>
+<p>such as illegal instruction</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>The best choice depends on the <em>signal type</em>. In some variants of
+Unix/Linux, the signal <em>handler</em> is process specific but the signal <em>mask</em>
+is thread specific.</p>
+<blockquote>
+<p>Among all the threads that are willing to recieve the signal, one is chosen
+arbitrarily to handle the signal.</p>
+</blockquote>
+<h3 id="thread-cancellation">Thread cancellation</h3>
+<p>Cancel a thread if it is no longer needed</p>
+<p>Two types of cancellation:
+1. Asynchronous: Cancelled immediately
+2. Deferred: Thread is notified to cancel itself by setting a flag that is
+read periodically by the thread.</p>
+<blockquote>
+<p>Desirable if the thread is in the middle of modifying shared data, so
+    Asynchronous cancellation would corrupt the data.</p>
+</blockquote>
+<h3 id="thread-local-storage">Thread-local storage</h3>
+<p>Sometimes each thread needs its own seperate copy for certain variables</p>
+<ul>
+<li>Helps reduce programming errors</li>
+</ul>
+<h2 id="optimizations">Optimizations</h2>
+<ol>
+<li>Thread pools: Create a collection of threads once and select a free thread to perform a specific task when needed <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /><ol>
+<li>Improves performance of applications in which new tasks arrive / are generated at runtime</li>
+<li>Eliminates overhead of creating and destroying at runtime.</li>
+</ol>
+</li>
+<li>Grand Central Dispatch (GCD): Apples implementation of thread pools with
+   other enhancements for managing concurrent operations more easily and
+   efficiently</li>
+</ol>
+<blockquote>
+<p>Context switch: Switching from one process to another <br>
+Mode switch: User to Kernel and vice versa <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></p>
+</blockquote>
 
 
 

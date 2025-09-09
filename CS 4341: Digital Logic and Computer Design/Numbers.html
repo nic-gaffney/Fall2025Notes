@@ -676,12 +676,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/Processes.html" class="md-nav__link">
+      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/Multiprocessing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Processes
+    Multiprogramming
     
   </span>
   
@@ -699,12 +699,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/new.html" class="md-nav__link">
+      <a href="../CS%204348%3A%20Operating%20Systems%20Concepts/Processes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Multiprogramming
+    Processes
     
   </span>
   
@@ -1099,26 +1099,34 @@
 </table>
 <h3 id="decimal-to-binary">Decimal to Binary <img alt="🔟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f51f.png" title=":keycap_ten:" /><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/27a1.png" title=":arrow_right:" /><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:" /></h3>
 <ul>
-<li>Two Methods:
-    - Largest power of 2 that fits<div class="highlight"><pre><span></span><code>  $$
-  53_{10} - 32_{10} = 21_{10}\\
-  - 16_{10} = 5_{10}\\
-  - 4_{10} = 1_{10}\\
-  - 1_{10} = 0\\
-   53_{10} =110101_2
-  $$
-</code></pre></div>
-<p>- Repeatedly divide by 2</p>
-<div class="highlight"><pre><span></span><code>  $$
-  53_{10}\div2=26_{10} R\blue1 \\
-  \div2=13_{10}R\blue0          \\
-  \div2=6_{10}R\blue1           \\
-  \div2=3_{10}R\blue0           \\
-  \div2=1_{10}R\blue1           \\
-  \div2=R\blue1                 \\
-  =\blue{110101}_2
-  $$
-</code></pre></div>
+<li>
+<p>Two Methods:</p>
+<ul>
+<li>
+<p>Largest power of 2 that fits</p>
+<div class="arithmatex">\[
+53_{10} - 32_{10} = 21_{10}\\
+- 16_{10} = 5_{10}\\
+- 4_{10} = 1_{10}\\
+- 1_{10} = 0\\
+53_{10} =110101_2
+\]</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>Repeatedly divide by 2</p>
+<div class="arithmatex">\[
+53_{10}\div2=26_{10} R\blue1 \\
+\div2=13_{10}R\blue0          \\
+\div2=6_{10}R\blue1           \\
+\div2=3_{10}R\blue0           \\
+\div2=1_{10}R\blue1           \\
+\div2=R\blue1                 \\
+=\blue{110101}_2
+\]</div>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="binary-values-and-range">Binary Values and Range</h3>
