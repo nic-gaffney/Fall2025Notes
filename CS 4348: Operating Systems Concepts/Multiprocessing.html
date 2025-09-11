@@ -1054,30 +1054,22 @@
 <hr />
 <h2 id="concurrency">Concurrency</h2>
 <ul>
-<li>Use <em>multiple</em> processes<ul>
+<li>Use <em>multiple</em> processes</li>
 <li>Different processes run on seperate processors or seperate tasks</li>
-</ul>
-</li>
-<li>Processes need to share resources<ul>
+<li>Processes need to share resources</li>
 <li>Use IPC</li>
-</ul>
-</li>
 </ul>
 <h3 id="using-processes">Using processes</h3>
 <p>Solves both problems, with a hitch:</p>
 <ol>
 <li>Needs an <strong>explicit setup</strong> to enable processes to share memory</li>
-<li><strong>Creating and destroying</strong> processes is quite <em>expensive</em><ul>
+<li><strong>Creating and destroying</strong> processes is quite <em>expensive</em></li>
 <li>Must allocate many resources</li>
-</ul>
-</li>
-<li>Switching between processes is also expensive<ul>
+<li>Switching between processes is also expensive</li>
 <li>Switching between two processes requires <strong>saving</strong> state of one process
-  and <strong>loading</strong> state of another</li>
+    and <strong>loading</strong> state of another</li>
 <li>Especially important in a uniprocessor machine since <strong>all processes</strong>
-  need to share the same CPU</li>
-</ul>
-</li>
+    need to share the same CPU</li>
 </ol>
 <blockquote>
 <p>Suboptimal utilization of resources resulting in <br>
@@ -1088,10 +1080,8 @@
 <ul>
 <li>Allow <em>related</em> processes to <em>share</em> resources including address space while
 also protecting unrelated processes from eachother</li>
-<li>Allow <em>multiple execution flows</em> within a single address space<ul>
+<li>Allow <em>multiple execution flows</em> within a single address space</li>
 <li>Each execution flow is referred as a <em>thread</em> (initially referred to as tasks)</li>
-</ul>
-</li>
 </ul>
 <h4 id="thread-specific-resources">Thread specific resources</h4>
 <ul>
@@ -1135,49 +1125,37 @@ programming emerged.</p>
 in kernel space</p>
 <ul>
 <li>Referred to as kernel level threads</li>
-<li>Kernel maintains information in thread control block<ul>
+<li>Kernel maintains information in thread control block</li>
 <li>Analogous to process control block</li>
-</ul>
-</li>
 </ul>
 <h3 id="pros-and-cons-ult-vs-klt">Pros and cons (ULT vs KLT)</h3>
 <h4 id="user-level-threads">User level threads</h4>
 <ul>
-<li>Pros:<ul>
+<li>Pros:</li>
 <li>Low overhead: cheaper to C,D,M than KLT</li>
 <li>Flexible scheduling: Thread scheduling can be tailored on a per application
-  basis.</li>
-</ul>
-</li>
-<li>Cons<ul>
+    basis.</li>
+<li>Cons</li>
 <li>No parallelism: Only one thread can be run at a time (even with multiple
-  CPUS).</li>
+    CPUS).</li>
 <li>Dependent progress: If one thread invokes a blocking operation, the entire
-  process is blocked</li>
-</ul>
-</li>
+    process is blocked</li>
 </ul>
 <h4 id="kernel-level-threads">Kernel level threads</h4>
 <ul>
-<li>Pros:<ul>
+<li>Pros:</li>
 <li>Optimal CPU utilization: Each hread can be run on a seperate processor</li>
 <li>Independent progress: If one thread invokes a blocking operation,
-  then only that thread is blocked</li>
-</ul>
-</li>
-<li>Cons<ul>
+    then only that thread is blocked</li>
+<li>Cons</li>
 <li>High overhead</li>
-</ul>
-</li>
 </ul>
 <h3 id="thread-abstraction-models">Thread abstraction models</h3>
 <ol>
 <li>Many to one (ULT): Only ULT</li>
 <li>One to one (KLT): Only KLT</li>
-<li>Many to many (hybrid): Process has user level and kernel level threads<ol>
+<li>Many to many (hybrid): Process has user level and kernel level threads</li>
 <li>Very hard to implement</li>
-</ol>
-</li>
 </ol>
 <h2 id="issues-when-implementing-threads">Issues when implementing threads</h2>
 <h3 id="semantics-of-fork-and-exec-syscalls">Semantics of fork and exec syscalls</h3>
@@ -1190,15 +1168,13 @@ make it highly inefficient to create so many threads only to be destroyed</li>
 <h3 id="signal-handling">Signal handling</h3>
 <p>Should a signal be delivered to <em>one</em> or <em>all</em> threads?</p>
 <ul>
-<li>Possible alternatives to deliver the signal to:<ul>
+<li>Possible alternatives to deliver the signal to:</li>
 <li>All threads</li>
 <li>Certain threads</li>
 <li>A single thread</li>
 <li>Thre thread to which the signal applies<blockquote>
 <p>such as illegal instruction</p>
 </blockquote>
-</li>
-</ul>
 </li>
 </ul>
 <p>The best choice depends on the <em>signal type</em>. In some variants of
@@ -1225,11 +1201,9 @@ read periodically by the thread.</p>
 </ul>
 <h2 id="optimizations">Optimizations</h2>
 <ol>
-<li>Thread pools: Create a collection of threads once and select a free thread to perform a specific task when needed <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /><ol>
+<li>Thread pools: Create a collection of threads once and select a free thread to perform a specific task when needed <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></li>
 <li>Improves performance of applications in which new tasks arrive / are generated at runtime</li>
 <li>Eliminates overhead of creating and destroying at runtime.</li>
-</ol>
-</li>
 <li>Grand Central Dispatch (GCD): Apples implementation of thread pools with
    other enhancements for managing concurrent operations more easily and
    efficiently</li>

@@ -1095,10 +1095,14 @@
 <p>08/28/2025</p>
 <hr />
 <ul>
-<li>Decimal: Base 10
-    - Every day usage</li>
-<li>Binary: Base 2
-    - 1s and 0s, easy for computers</li>
+<li>Decimal: Base 10<ul>
+<li>Every day usage</li>
+</ul>
+</li>
+<li>Binary: Base 2<ul>
+<li>1s and 0s, easy for computers</li>
+</ul>
+</li>
 <li>Hex: Base 16</li>
 </ul>
 <h2 id="base-10">Base 10</h2>
@@ -1145,9 +1149,7 @@
 </table>
 <h3 id="decimal-to-binary">Decimal to Binary <img alt="🔟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f51f.png" title=":keycap_ten:" /><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/27a1.png" title=":arrow_right:" /><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:" /></h3>
 <ul>
-<li>
-<p>Two Methods:</p>
-<ul>
+<li>Two Methods:</li>
 <li>
 <p>Largest power of 2 that fits</p>
 <div class="arithmatex">\[
@@ -1158,8 +1160,6 @@
 53_{10} =110101_2
 \]</div>
 </li>
-</ul>
-<ul>
 <li>
 <p>Repeatedly divide by 2</p>
 <div class="arithmatex">\[
@@ -1171,8 +1171,6 @@
 \div2=R\blue1                 \\
 =\blue{110101}_2
 \]</div>
-</li>
-</ul>
 </li>
 </ul>
 <h3 id="binary-values-and-range">Binary Values and Range</h3>
@@ -1204,11 +1202,15 @@ A = \sum^{N-1}_{i=0}{a_i2^i}
 <p><span class="arithmatex">\(\red{0100}\blue{1010}\green{1111}_2\)</span></p>
 <h2 id="bits-bytes-nibbles">Bits, Bytes, Nibbles</h2>
 <ul>
-<li>Bit: <span class="arithmatex">\(\blue1001011\red0\)</span>
-    - <span class="arithmatex">\(\text{\blue{msb}}\)</span>: Most significant bit
-    - <span class="arithmatex">\(\text{\red{lsb}}\)</span>: Least significant bit</li>
-<li>Byte: <span class="arithmatex">\(\green{10010110}\)</span>
-    - <span class="arithmatex">\(\blue{CE}BF9A\red{D7}\)</span></li>
+<li>Bit: <span class="arithmatex">\(\blue1001011\red0\)</span><ul>
+<li><span class="arithmatex">\(\text{\blue{msb}}\)</span>: Most significant bit</li>
+<li><span class="arithmatex">\(\text{\red{lsb}}\)</span>: Least significant bit</li>
+</ul>
+</li>
+<li>Byte: <span class="arithmatex">\(\green{10010110}\)</span><ul>
+<li><span class="arithmatex">\(\blue{CE}BF9A\red{D7}\)</span></li>
+</ul>
+</li>
 </ul>
 <h2 id="large-powers-of-two">Large powers of two <img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:" /></h2>
 <ul>
@@ -1247,8 +1249,10 @@ A = \left(-1\right)^{a_{N-1}}\sum^{N-2}_{i=0}{a_i2^i}
 <h4 id="twos-compliment-numbers">Two's compliment numbers</h4>
 <ul>
 <li>The <span class="arithmatex">\(\text{\blue{msb}}\)</span> is the sign</li>
-<li>Invert the unsigned number + 1
-    - Only works on <strong>unsigned</strong> numbers</li>
+<li>Invert the unsigned number + 1<ul>
+<li>Only works on <strong>unsigned</strong> numbers</li>
+</ul>
+</li>
 <li>Helps with math, since just using a sign bit messes up negative math.<blockquote>
 <p>Subtraction is as simple as "taking the two's" of the second number and adding them.</p>
 </blockquote>

@@ -964,10 +964,8 @@ not yet completed.</p>
 <li><strong>New</strong>: The process has been created but not yet in memory<blockquote>
 <p>Happens directly after you run the command</p>
 </blockquote>
-<ul>
-<li>PCB allocated, so it is <em>able</em> to give your process resources</li>
-</ul>
 </li>
+<li>PCB allocated, so it is <em>able</em> to give your process resources</li>
 <li><strong>Ready</strong>: The process is in memory and waiting to be assigned a CPU by
 the scheduler</li>
 <li><strong>Running</strong>: The process is currently being executed by a CPU<blockquote>
@@ -975,20 +973,16 @@ the scheduler</li>
   by the scheduler.</p>
 </blockquote>
 </li>
-<li><strong>Blocked</strong>: The process is waiting for some event to occur<ul>
+<li><strong>Blocked</strong>: The process is waiting for some event to occur</li>
 <li>IO</li>
 <li>Lock aquisition</li>
 <li>Timer to expire</li>
-</ul>
-</li>
-<li><strong>Terminated</strong>: The process has completed its execution<ul>
+<li><strong>Terminated</strong>: The process has completed its execution</li>
 <li>Deallocation of memory<ul>
 <li>Pages marked as free</li>
 </ul>
 </li>
 <li>Return PCB to list of free PCBs</li>
-</ul>
-</li>
 </ul>
 <blockquote>
 <p>More states could exist if you can justify their existence</p>
@@ -1033,13 +1027,11 @@ the scheduler</li>
 </blockquote>
 <h3 id="dispatcher">Dispatcher</h3>
 <ul>
-<li><em>Context switch</em>: the process of changing the execution context on a CPU from one process to another<ul>
+<li><em>Context switch</em>: the process of changing the execution context on a CPU from one process to another</li>
 <li><em>saving</em> the execution context of the previous process</li>
 <li><em>loading</em> the execution context of the next processes<blockquote>
 <p>cannot <em>create</em> a process, simply transfers control</p>
 </blockquote>
-</li>
-</ul>
 </li>
 <li><em>Dispatch latency</em>: the amount of time it takes the OS to stop one process and start another</li>
 </ul>
@@ -1050,11 +1042,9 @@ the scheduler</li>
 <li>Logical address translation data, including<blockquote>
 <p>Logical address relative to the process address 0x0 <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></p>
 </blockquote>
-<ul>
+</li>
 <li>Translation lookaside buffers (TLB)</li>
 <li>Page tables</li>
-</ul>
-</li>
 <li>Cache contents for hiding memory latency</li>
 </ul>
 <p>Contents of the registers are saved in the PCB (process control blocks)</p>
@@ -1064,33 +1054,25 @@ the scheduler</li>
 </ul>
 <h4 id="context-switch-vs-mode-switch">Context switch vs Mode switch</h4>
 <ul>
-<li>Mode switch involves changing the execution mode from kernel to user and vice versa<ul>
+<li>Mode switch involves changing the execution mode from kernel to user and vice versa</li>
 <li>May save and restore only a subset of registers</li>
 <li>Does not require flushing or modifying information associated with
-logical address translation or cache</li>
+  logical address translation or cache</li>
 <li>Kernel instructions and data are shared among all processes by mapping them
-to a reserved portion of every address space<ul>
+  to a reserved portion of every address space<ul>
 <li>Avoids full context switch</li>
 <li>Hardware support is <em>mandatory</em> to protext kernel instructions from misbehabing processes in user mode</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Context switching involves changing the process that the cpu is executing<ul>
+<li>Context switching involves changing the process that the cpu is executing</li>
 <li>More expensive than mode switch</li>
-</ul>
-</li>
 </ul>
 <h3 id="not-all-three">Not all Three</h3>
 <ul>
-<li>Not all Operating Systems have all three components<ul>
+<li>Not all Operating Systems have all three components</li>
 <li>Long and medium may not be supported</li>
-</ul>
-</li>
-<li>Short term scheduler should be fast and incur minimal overhead<ul>
+<li>Short term scheduler should be fast and incur minimal overhead</li>
 <li>Much more frequently run than the other two schedulers</li>
-</ul>
-</li>
 </ul>
 <h2 id="metrics-for-cpu-scheduling">Metrics for CPU scheduling</h2>
 <ul>

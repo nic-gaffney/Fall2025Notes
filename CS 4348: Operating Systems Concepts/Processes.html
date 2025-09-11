@@ -1318,23 +1318,33 @@ and <strong>the program comes alive!</strong></p>
 <h3 id="realizing-the-abstraction">Realizing the abstraction</h3>
 <ul>
 <li>A program only occupies space on disk.</li>
-<li>A process needs <em>many more</em> resources
-    - <strong>CPU</strong> to decode and execute instructions <img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4bb.png" title=":computer:" />
-    - <strong>Memory</strong> to store instructions and data <img alt="📖" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4d6.png" title=":book:" />
-    - <strong>IO devices</strong> to interact with the outside world <img alt="⌨️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2328.png" title=":keyboard:" /></li>
+<li>A process needs <em>many more</em> resources<ul>
+<li><strong>CPU</strong> to decode and execute instructions <img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4bb.png" title=":computer:" /></li>
+<li><strong>Memory</strong> to store instructions and data <img alt="📖" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4d6.png" title=":book:" /></li>
+<li><strong>IO devices</strong> to interact with the outside world <img alt="⌨️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2328.png" title=":keyboard:" /></li>
+</ul>
+</li>
 </ul>
 <h4 id="cpu">CPU</h4>
 <p>Stores a lot of info about the process it is executing.</p>
 <ul>
 <li><strong>Program Counter (PC)</strong> to store <em>address</em> of instruction being executed</li>
 <li><strong>Instruction Register (IR)</strong> to store the <em>actual instruction</em> being executed.</li>
-<li><strong>General purpose registers</strong> to <em>temporarily</em> store operands
-    - <em>Arithmetic Logic Unit (ALU)</em> can only operate on data stored in CPU. <img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> <span class="arithmatex">\(\text{\red{why?}}\)</span>
-        - <span class="arithmatex">\(\text{\green{Registers are directly connected to the CPU. Main memory is not.}}\)</span></li>
-<li><strong>Condition code registers (CCR)</strong> to store the <em>result</em> of the operation
-    - AKA <em>status register</em> or <em>flag register</em></li>
-<li><strong>Stack pointer (SP)</strong> to support <em>function</em> calls
-    - Pushes current PC to the stack before jumping to the function, then <code>return</code> will return the SP to that PC after the function is done.</li>
+<li><strong>General purpose registers</strong> to <em>temporarily</em> store operands<ul>
+<li><em>Arithmetic Logic Unit (ALU)</em> can only operate on data stored in CPU. <img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> <span class="arithmatex">\(\text{\red{why?}}\)</span><ul>
+<li><span class="arithmatex">\(\text{\green{Registers are directly connected to the CPU. Main memory is not.}}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Condition code registers (CCR)</strong> to store the <em>result</em> of the operation<ul>
+<li>AKA <em>status register</em> or <em>flag register</em></li>
+</ul>
+</li>
+<li><strong>Stack pointer (SP)</strong> to support <em>function</em> calls<ul>
+<li>Pushes current PC to the stack before jumping to the function, then <code>return</code> will return the SP to that PC after the function is done.</li>
+</ul>
+</li>
 </ul>
 <p>This is important to know because the OS is in charge of scheduling and swapping programs out of and into the CPU. It is important to save the state of the CPU when running the program, so when we return to that program it keeps its state.
 <strong>The OS swaps programs in and out of memory, so we must save the state.</strong></p>
@@ -1342,22 +1352,28 @@ and <strong>the program comes alive!</strong></p>
 <p>Main memory is used as a store for instructions and data of the process being executed. While a program is running, its instructions and data need to reside in main memory.</p>
 <ul>
 <li>CPU <strong>cannot</strong> access data stored on hard disk drive directly.</li>
-<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> <span class="arithmatex">\(\text{\red{What is the largest process that a machine can run?}}\)</span>
-    - <span class="arithmatex">\(\text{\green{idk lol}}\)</span></li>
+<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> <span class="arithmatex">\(\text{\red{What is the largest process that a machine can run?}}\)</span><ul>
+<li><span class="arithmatex">\(\text{\green{idk lol}}\)</span></li>
+</ul>
+</li>
 </ul>
 <p>Main memory is <strong>orders of magnitude slower</strong> than CPU.</p>
 <ul>
 <li>Caching is used to hide the latency</li>
 <li>Otherwise, CPU is idle most of the time.</li>
-<li>Different types:
-    - addess translation
-    - instruction
-    - data</li>
-<li>Different Levels:
-    - L1
-    - L2
-    - L3
-    - L4</li>
+<li>Different types:<ul>
+<li>addess translation</li>
+<li>instruction</li>
+<li>data</li>
+</ul>
+</li>
+<li>Different Levels:<ul>
+<li>L1</li>
+<li>L2</li>
+<li>L3</li>
+<li>L4</li>
+</ul>
+</li>
 <li>Caching alone is not sufficient to keep CPU busy, other techniques needed.</li>
 </ul>
 <h4 id="io-devices">IO devices</h4>
@@ -1376,29 +1392,37 @@ and <strong>the program comes alive!</strong></p>
 <li>A user was given <em>complete</em> control over the computer for a period of time</li>
 <li>Program and input data were punched into a deck of cards using a <em>keypunch</em></li>
 <li>UI was <em>rudimentary</em>, users had to accomodate compters</li>
-<li>A computer would:
-    1. Read the program from the cards
-    2. Execute the program
-    3. Write output to magnetic tape or printer</li>
+<li>A computer would:<ol>
+<li>Read the program from the cards</li>
+<li>Execute the program</li>
+<li>Write output to magnetic tape or printer</li>
+</ol>
+</li>
 <li>Input was at the beginning, output at the end.</li>
 </ul>
 <h3 id="batch-processing">Batch processing</h3>
 <ul>
 <li>Smaller, slower, and less expensive computers were used to develop programs.</li>
-<li>Several jobs submited to larger, faster computers for <strong>batch processing</strong>.
-    - Would run jobs one by one without intervention from user.</li>
+<li>Several jobs submited to larger, faster computers for <strong>batch processing</strong>.<ul>
+<li>Would run jobs one by one without intervention from user.</li>
+</ul>
+</li>
 </ul>
 <h3 id="interactive-processing">Interactive processing</h3>
 <ul>
-<li>Two independent trends:
-    1. CPUs were becoming faster
-    2. Programs were becoming more complicated, requiring <em>interactive</em> sessions with a user</li>
+<li>Two independent trends:<ol>
+<li>CPUs were becoming faster</li>
+<li>Programs were becoming more complicated, requiring <em>interactive</em> sessions with a user</li>
+</ol>
+</li>
 </ul>
 <h3 id="improving-cpu-utilization">Improving CPU utilization</h3>
 <ul>
 <li>Execute multiple programs together.</li>
-<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> <span class="arithmatex">\(\text{\red{Can you execute multiple programs using a single CPU?}}\)</span>
-    - <span class="arithmatex">\(\text{\green{No}}\)</span></li>
+<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> <span class="arithmatex">\(\text{\red{Can you execute multiple programs using a single CPU?}}\)</span><ul>
+<li><span class="arithmatex">\(\text{\green{No}}\)</span></li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <p>known as <em>multiprogramming</em></p>
@@ -1417,32 +1441,44 @@ Time based: for example, when a process has used the CPU for a sufficiently long
 </blockquote>
 <h3 id="support-multiprogramming">Support Multiprogramming</h3>
 <ol>
-<li>Need a mechanism to allow the OS to <a href="#stop-and-resume"><em>stop</em> a process and <em>resume</em></a> it later
-    - Switching can happen at <em>any time</em>
-    - Switching should be <em>seamless</em>
-    - Only side effect should be a <em>delay</em> in completion time</li>
-<li>Need a mechanism to <a href="#fair-resource-sharing"><em>share resources</em></a> among concurrently running processes <em>fairly</em>
-    - CPU, Memory, IO
-    - No one process should be able to monopolize all resources</li>
-<li>Need a mechanism to <a href="#protection"><em>protect</em></a> processes <em>from each other</em>
-    - A process should not be able to read or write data of another process.
-    &gt; All processes running are loaded into main memory, so we must protect them from eachother. If protections fail, <em>hacks happen</em>.</li>
+<li>Need a mechanism to allow the OS to <a href="#stop-and-resume"><em>stop</em> a process and <em>resume</em></a> it later<ul>
+<li>Switching can happen at <em>any time</em></li>
+<li>Switching should be <em>seamless</em></li>
+<li>Only side effect should be a <em>delay</em> in completion time</li>
+</ul>
+</li>
+<li>Need a mechanism to <a href="#fair-resource-sharing"><em>share resources</em></a> among concurrently running processes <em>fairly</em><ul>
+<li>CPU, Memory, IO</li>
+<li>No one process should be able to monopolize all resources</li>
+</ul>
+</li>
+<li>Need a mechanism to <a href="#protection"><em>protect</em></a> processes <em>from each other</em><ul>
+<li>A process should not be able to read or write data of another process.<blockquote>
+<p>All processes running are loaded into main memory, so we must protect them from eachother. If protections fail, <em>hacks happen</em>.</p>
+</blockquote>
+</li>
+</ul>
+</li>
 </ol>
 <h4 id="stop-and-resume">Stop and resume</h4>
 <p>Maintain bookkeeping record of every process being executed</p>
 <ul>
-<li>Referred to as a <strong>Process Control Block (PCB) <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></strong>
-    - Used to save <em>execution context</em> of an interrupted process.</li>
+<li>Referred to as a <strong>Process Control Block (PCB) <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></strong><ul>
+<li>Used to save <em>execution context</em> of an interrupted process.</li>
+</ul>
+</li>
 <li>Records are maintained in a table referred to as a <em>process table</em><blockquote>
 <p>Basically an array of process control blocks.</p>
 </blockquote>
 </li>
-<li>Maximum number of processes that can be run concurrently is <em>degree of multiprogramming</em>
-    - Bound by the upper size of the process table.
-    - May also depend on other factors like memory usage.<blockquote>
+<li>Maximum number of processes that can be run concurrently is <em>degree of multiprogramming</em><ul>
+<li>Bound by the upper size of the process table.</li>
+<li>May also depend on other factors like memory usage.<blockquote>
 <p>If the process table is full, process creation will fail.<br/>
 The OS itself must account for itself and its many processes in this table as well.</p>
 </blockquote>
+</li>
+</ul>
 </li>
 </ul>
 <h5 id="process-control-block">Process Control Block</h5>
@@ -1476,12 +1512,14 @@ The OS itself must account for itself and its many processes in this table as we
 <p>Every CPU supports at least two modes of execution / protection domains: <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></p>
 <ol>
 <li><strong>User Mode</strong>: CPU can only execute a restricted set of instructions</li>
-<li><strong>Kernel Mode</strong> CPU can execute <em>any</em> instruction
-    - Also known as unrestricted, priveleged, or supervisory mode.
-    - priveleged instructions can only be executed in this mode
-    - a resource can be (de)allocated to a process using a priveleged instruction only
-    - an elaborate mechanism is used to ensure only trusted code is executed in this mode
-    - a switch to kernel mode is accompanied by execution of trusted code from one of the entry points</li>
+<li><strong>Kernel Mode</strong> CPU can execute <em>any</em> instruction<ul>
+<li>Also known as unrestricted, priveleged, or supervisory mode.</li>
+<li>priveleged instructions can only be executed in this mode</li>
+<li>a resource can be (de)allocated to a process using a priveleged instruction only</li>
+<li>an elaborate mechanism is used to ensure only trusted code is executed in this mode</li>
+<li>a switch to kernel mode is accompanied by execution of trusted code from one of the entry points</li>
+</ul>
+</li>
 </ol>
 <p><em>Mode switch</em> refers to the change in the execution mode</p>
 <p>Switch from user to kernel is preformed by a special hardware instruction called <em>trap</em></p>
@@ -1510,22 +1548,26 @@ The OS itself must account for itself and its many processes in this table as we
 <h4 id="protection">Protection</h4>
 <ul>
 <li><strong>Seperate modes</strong> for trusted and user code</li>
-<li>To protect processes from eachother, each process has its own <strong>address space</strong>
-    - Address space of a process refers to a block of physical memory where the
-    portion of process images are stored
-    - Memory references in the program aretranslated to locations in the
-    address space (<em>logical address</em> as opposed to <em>physical address</em>)
-    - Special hardware is used to quickly translate logical address to
-    physical address at runtime, and <em>validate</em> that the physical address
-    belongs to the process being executed (covered in detail in memory
-    management)</li>
+<li>To protect processes from eachother, each process has its own <strong>address space</strong><ul>
+<li>Address space of a process refers to a block of physical memory where the
+portion of process images are stored</li>
+<li>Memory references in the program aretranslated to locations in the
+address space (<em>logical address</em> as opposed to <em>physical address</em>)</li>
+<li>Special hardware is used to quickly translate logical address to
+physical address at runtime, and <em>validate</em> that the physical address
+belongs to the process being executed (covered in detail in memory
+management)</li>
+</ul>
+</li>
 </ul>
 <h5 id="address-translation">Address Translation</h5>
 <ul>
 <li>Program references generate logical addresses assuming the process image has a starting address of 0.</li>
-<li>Each process has <em>address translation data</em> which may consist of one of the following:
-    - Base and limit registers
-    - Page table</li>
+<li>Each process has <em>address translation data</em> which may consist of one of the following:<ul>
+<li>Base and limit registers</li>
+<li>Page table</li>
+</ul>
+</li>
 <li>Address translation data is used to translate the physical address and validate it at run time</li>
 <li>Translation data can only be modified with <em>privileged instructions</em>.</li>
 </ul>
@@ -1543,12 +1585,16 @@ process or to monopolize one or more resources. Other examples include:</p>
 </ul>
 <h5 id="address-space">Address space</h5>
 <ul>
-<li>Process P:
-    - Base = 256
-    - P[1] = 5, Physical memory is 257</li>
-<li>Process Q:
-    - Base = 2048
-    - Q[1] = 5, Physical memory is 2049</li>
+<li>Process P:<ul>
+<li>Base = 256</li>
+<li>P[1] = 5, Physical memory is 257</li>
+</ul>
+</li>
+<li>Process Q:<ul>
+<li>Base = 2048</li>
+<li>Q[1] = 5, Physical memory is 2049</li>
+</ul>
+</li>
 </ul>
 <p>If P[1] becomes 10, Q[1] stays 5 because they are at different locations in memory.</p>
 <h2 id="process-creation-in-unix-linux">Process creation in Unix / Linux</h2>
@@ -1558,12 +1604,16 @@ process or to monopolize one or more resources. Other examples include:</p>
 </blockquote>
 <ul>
 <li>Creates a replica child process whos process image is <em>identical</em> to
-the parent process except for PID.
-    - Processes arranged in <em>heirarchical</em> manner
-    - Parent and child have <em>distinct</em> address space</li>
-<li>How can a process tell if it is the parent or child?
-    - <code>fork</code> returns the PID of the child to the parent and 0 to the child
-    - examine return value</li>
+the parent process except for PID.<ul>
+<li>Processes arranged in <em>heirarchical</em> manner</li>
+<li>Parent and child have <em>distinct</em> address space</li>
+</ul>
+</li>
+<li>How can a process tell if it is the parent or child?<ul>
+<li><code>fork</code> returns the PID of the child to the parent and 0 to the child</li>
+<li>examine return value</li>
+</ul>
+</li>
 <li>Both parent and child process <em>continue</em> their execution from the <em>next instruction</em> after <code>fork</code>.</li>
 </ul>
 <details>
@@ -1618,8 +1668,10 @@ if (pid == 0) {
 </ul>
 <h3 id="shared-memory">Shared memory</h3>
 <ul>
-<li>A portion of main memory is accessible to multiple proceses
-    - A change made by one process in this portion is instantly visible to all processes</li>
+<li>A portion of main memory is accessible to multiple proceses<ul>
+<li>A change made by one process in this portion is instantly visible to all processes</li>
+</ul>
+</li>
 <li>Implemented by mapping parts of the address spaces of multiple processes to the same segment of main memory.<blockquote>
 <p>Its like a global variable between processes</p>
 </blockquote>
@@ -1629,26 +1681,38 @@ if (pid == 0) {
 </ul>
 <h3 id="message-passing">Message Passing</h3>
 <ul>
-<li>A process can send a message to another process <em>asynchronously</em>. This message is then stored in a message queue until the recieving process asks for it.
-    - Both sending and recieving requires <strong>system calls.</strong></li>
-<li>Message passing may be <em>synchronous</em>.
-    - Both sender and reciever have to be ready
-    - Sometime referred to as rendezvous
-    - Sender blocked until reciever is ready and vice versa
-    - Sometimes used to mean <em>two way</em></li>
-<li>Third option is <em>neither</em> blocks.
-    - System call invoked by reciever returns if the message queue is empty.</li>
-<li>Maximizes concurrency but increases burden on programmer.
-    - Only use when performance is key concern</li>
+<li>A process can send a message to another process <em>asynchronously</em>. This message is then stored in a message queue until the recieving process asks for it.<ul>
+<li>Both sending and recieving requires <strong>system calls.</strong></li>
 </ul>
+</li>
+<li>Message passing may be <em>synchronous</em>.<ul>
+<li>Both sender and reciever have to be ready</li>
+<li>Sometime referred to as rendezvous</li>
+<li>Sender blocked until reciever is ready and vice versa</li>
+<li>Sometimes used to mean <em>two way</em></li>
+</ul>
+</li>
+<li>Third option is <em>neither</em> blocks.<ul>
+<li>System call invoked by reciever returns if the message queue is empty.</li>
+</ul>
+</li>
+<li>
+<p>Maximizes concurrency but increases burden on programmer.</p>
 <ul>
-<li>Advantages: easier to design, analyze, test, and debug</li>
+<li>Only use when performance is key concern</li>
+</ul>
+</li>
+<li>
+<p>Advantages: easier to design, analyze, test, and debug</p>
+</li>
 <li>Disadvantages: High overhead, expensive to implement as every message exchanged requires two system calls and two copying operations</li>
 </ul>
 <h3 id="pipes">Pipes</h3>
 <ul>
-<li>Similar advantages and disadvantages to synchronous message passing
-    - Natural fit for producer consumer paradigm</li>
+<li>Similar advantages and disadvantages to synchronous message passing<ul>
+<li>Natural fit for producer consumer paradigm</li>
+</ul>
+</li>
 <li>Almost identical to TCP/UDP</li>
 </ul>
 
