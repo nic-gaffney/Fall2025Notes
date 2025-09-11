@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../CS%204341%3A%20Digital%20Logic%20and%20Computer%20Design/Numbers.html">
+        <link rel="prev" href="Processes.html">
       
       
-        <link rel="next" href="Multiprocessing.html">
+        <link rel="next" href="../CS%204386%3A%20Compiler%20Design/class-overview.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Introduction - Fall 2025</title>
+        <title>Scheduling - Fall 2025</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#scheduling" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Scheduling
             
           </span>
         </div>
@@ -395,32 +395,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introduction
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Introduction.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Introduction.html" class="md-nav__link">
         
   
   
@@ -431,68 +409,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#operating-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operating System
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#computer-system-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Computer System Components
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-of-operating-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function of Operating System
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Function of Operating System">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#os-as-extended-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      OS as Extended machine
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -548,10 +464,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Scheduling.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Scheduling
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Scheduling.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -562,6 +500,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process-states-and-transistions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process states and transistions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process states and transistions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process States
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional states
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transisions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-transisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Transisions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduler components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dispatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispatcher
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dispatcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-switch-vs-mode-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context switch vs Mode switch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-all-three" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not all Three
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-for-cpu-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics for CPU scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics for CPU scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly used metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -692,37 +794,139 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system" class="md-nav__link">
+  <a href="#process-states-and-transistions" class="md-nav__link">
     <span class="md-ellipsis">
-      Operating System
+      Process states and transistions
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#computer-system-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Computer System Components
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-of-operating-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function of Operating System
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Function of Operating System">
+    <nav class="md-nav" aria-label="Process states and transistions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#os-as-extended-machine" class="md-nav__link">
+  <a href="#process-states" class="md-nav__link">
     <span class="md-ellipsis">
-      OS as Extended machine
+      Process States
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional states
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transisions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-transisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Transisions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduler components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dispatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispatcher
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dispatcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-switch-vs-mode-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context switch vs Mode switch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-all-three" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not all Three
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-for-cpu-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics for CPU scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics for CPU scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly used metrics
     </span>
   </a>
   
@@ -749,54 +953,161 @@
 
 
 
-<h1 id="introduction">Introduction</h1>
-<p>08/26/2025</p>
+<h1 id="scheduling">Scheduling</h1>
+<p>09/11/2025</p>
 <hr />
-<h2 id="operating-system">Operating System</h2>
+<h2 id="process-states-and-transistions">Process states and transistions</h2>
+<h3 id="process-states">Process States</h3>
+<p>Scheduler maintains the status of each process that has been created but
+not yet completed.</p>
 <ul>
-<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> What is an operating system?
-    * An Operating system acts as a bridge between a user and the hardware</li>
-<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> What is the purpose?
-    - Provides an environment for a user to execute programs</li>
-<li><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> What are the goals?
-    - <strong>Convinience</strong>.
-    - The secondary goal is <strong>efficiency</strong></li>
-</ul>
-<h2 id="computer-system-components">Computer System Components</h2>
+<li><strong>New</strong>: The process has been created but not yet in memory<blockquote>
+<p>Happens directly after you run the command</p>
+</blockquote>
 <ul>
-<li><strong>Hardware:</strong> <br/>
-Provides basic computing resources
-    - CPU
-    - Memory
-    - IO</li>
-<li><strong>Operating System:</strong><br/>
-Resource management
-    - Automates resource allocation
-    - Coordinates the hardware for various <em>Users</em></li>
-<li><strong>Apps:</strong><br/>
-Defines how the system resources are used
-    - Compilers
-    - Database systems
-    - Video games</li>
-<li><strong>Users</strong><br/>
-Someone or something using the computer
-    - People
-    - Machines
-    - Other computers</li>
+<li>PCB allocated, so it is <em>able</em> to give your process resources</li>
 </ul>
-<h2 id="function-of-operating-system">Function of Operating System</h2>
-<h3 id="os-as-extended-machine">OS as Extended machine</h3>
+</li>
+<li><strong>Ready</strong>: The process is in memory and waiting to be assigned a CPU by
+the scheduler</li>
+<li><strong>Running</strong>: The process is currently being executed by a CPU<blockquote>
+<p>The process will go between ready and running while being swapped out
+  by the scheduler.</p>
+</blockquote>
+</li>
+<li><strong>Blocked</strong>: The process is waiting for some event to occur<ul>
+<li>IO</li>
+<li>Lock aquisition</li>
+<li>Timer to expire</li>
+</ul>
+</li>
+<li><strong>Terminated</strong>: The process has completed its execution<ul>
+<li>Deallocation of memory<ul>
+<li>Pages marked as free</li>
+</ul>
+</li>
+<li>Return PCB to list of free PCBs</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>More states could exist if you can justify their existence</p>
+</blockquote>
+<h4 id="additional-states">Additional states</h4>
 <ul>
-<li>Coordination and control of limited resources such as:
-    - Memory
-    - Disk
-    - Network
-    - CPU</li>
+<li><strong>Suspended</strong> (Ready): the process is not in main memory and is not waiting for any event to occur<blockquote>
+<p>As soon as memory is available, get it back in and running again.</p>
+</blockquote>
+</li>
+<li><strong>Suspended</strong> (Blocked): the process is not in main memory and is waiting for any event to occur<blockquote>
+<p>Even if memory becomes free, keep it in secondary memory to wait for event</p>
+</blockquote>
+</li>
 </ul>
+<h3 id="transisions">Transisions</h3>
 <ul>
-<li>Deal with resource conflicts and fairness</li>
-<li>Make access efficient</li>
+<li>New <span class="arithmatex">\(\rightarrow\)</span> Ready: The OS has allocated resources to the process including memory so it can be executed</li>
+<li>Ready <span class="arithmatex">\(\rightarrow\)</span> Running: The process has been selected for execution by the scheduler</li>
+<li>Running <span class="arithmatex">\(\rightarrow\)</span> Blocked: The process is waiting for something to happen</li>
+<li>Running <span class="arithmatex">\(\rightarrow\)</span> Ready: The process has been moved out of the CPU due to interrupt or some other reason</li>
+<li>Running <span class="arithmatex">\(\rightarrow\)</span> Terminated: The process has completed and is marked for clean up</li>
+<li>Blocked <span class="arithmatex">\(\rightarrow\)</span> Ready: The process has recieved the event or IO completion</li>
 </ul>
+<h4 id="additional-transisions">Additional Transisions</h4>
+<ul>
+<li>Ready <span class="arithmatex">\(\rightarrow\)</span> Suspended(ready): Scheduler moved process from memory to secondary storage</li>
+<li>Suspended (ready) <span class="arithmatex">\(\rightarrow\)</span> Ready: Scheduler moved process from secondary storage to memory</li>
+<li>Ready <span class="arithmatex">\(\rightarrow\)</span> Suspended(Blocked): Scheduler moved process (currently blocked) from memory to secondary storage</li>
+<li>Suspended (blocked) <span class="arithmatex">\(\rightarrow\)</span> Blocked: Scheduler moved process (currently blocked) from secondary storage to memory</li>
+<li>Suspended (ready) <span class="arithmatex">\(\rightarrow\)</span> Suspended(blocked): Process has recieved the event it was blocking for</li>
+</ul>
+<h2 id="scheduler-components">Scheduler components</h2>
+<ul>
+<li>Long term scheduler: Decides which newly created process should be admitted for execution</li>
+<li>Medium term scheduler: Temporarily removes some processes from main memory</li>
+<li>Short term scheduler: Decides which process in memory should be assigned the CPU</li>
+</ul>
+<p>Long term and medium term control the <em>degree</em> of multiprogramming</p>
+<blockquote>
+<p>The max number of processes that can be run</p>
+</blockquote>
+<h3 id="dispatcher">Dispatcher</h3>
+<ul>
+<li><em>Context switch</em>: the process of changing the execution context on a CPU from one process to another<ul>
+<li><em>saving</em> the execution context of the previous process</li>
+<li><em>loading</em> the execution context of the next processes<blockquote>
+<p>cannot <em>create</em> a process, simply transfers control</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><em>Dispatch latency</em>: the amount of time it takes the OS to stop one process and start another</li>
+</ul>
+<h4 id="context">Context</h4>
+<p>Execution context includes:</p>
+<ul>
+<li>Special and general purpose <em>CPU registers</em></li>
+<li>Logical address translation data, including<blockquote>
+<p>Logical address relative to the process address 0x0 <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:" /></p>
+</blockquote>
+<ul>
+<li>Translation lookaside buffers (TLB)</li>
+<li>Page tables</li>
+</ul>
+</li>
+<li>Cache contents for hiding memory latency</li>
+</ul>
+<p>Contents of the registers are saved in the PCB (process control blocks)</p>
+<ul>
+<li>Depending on the architecure, context switch may require flushing TLB and caches</li>
+<li>Some give <a href="https://wiki.osdev.org/Context_Switching#Hardware_Context_Switching">hardware support</a> for such actions</li>
+</ul>
+<h4 id="context-switch-vs-mode-switch">Context switch vs Mode switch</h4>
+<ul>
+<li>Mode switch involves changing the execution mode from kernel to user and vice versa<ul>
+<li>May save and restore only a subset of registers</li>
+<li>Does not require flushing or modifying information associated with
+logical address translation or cache</li>
+<li>Kernel instructions and data are shared among all processes by mapping them
+to a reserved portion of every address space<ul>
+<li>Avoids full context switch</li>
+<li>Hardware support is <em>mandatory</em> to protext kernel instructions from misbehabing processes in user mode</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Context switching involves changing the process that the cpu is executing<ul>
+<li>More expensive than mode switch</li>
+</ul>
+</li>
+</ul>
+<h3 id="not-all-three">Not all Three</h3>
+<ul>
+<li>Not all Operating Systems have all three components<ul>
+<li>Long and medium may not be supported</li>
+</ul>
+</li>
+<li>Short term scheduler should be fast and incur minimal overhead<ul>
+<li>Much more frequently run than the other two schedulers</li>
+</ul>
+</li>
+</ul>
+<h2 id="metrics-for-cpu-scheduling">Metrics for CPU scheduling</h2>
+<ul>
+<li>Many different cpu scheduling algorithms have been proposed.</li>
+<li>A number of criteria or metrics have been identified to measure this.</li>
+</ul>
+<h3 id="commonly-used-metrics">Commonly used metrics</h3>
+<ol>
+<li><strong>CPU Utilization</strong>: Percentage of the time the CPU is busy</li>
+<li><strong>Turnaround time</strong>: the amount of time elapsed between when a process
+arrives and when it completes its execution</li>
+<li><strong>System throughput</strong>: Number of processes completed per unit time</li>
+<li><strong>Waiting time</strong>: the sum of the time spent in the ready queue during the life
+of the process; <em>time blocked is not part of the waiting time</em></li>
+<li><strong>Response time</strong>: the amount of time elapsed between when a user submits a request and when the user sees a response</li>
+<li><strong>Fairness</strong>: Each process should get an equitable share of the CPU</li>
+</ol>
 
 
 
