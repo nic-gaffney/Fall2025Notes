@@ -19,7 +19,7 @@ extra_css:
   - css/katex.min.css
 markdown_extensions:
   - markdown_katex
-  - mdx_truly_sane_lists
+  #- mdx_truly_sane_lists
   # - pymdownx.b64
   - pymdownx.betterem
   # - pymdownx.blocks.admonition
